@@ -21,9 +21,9 @@ class Panagram {
         case .anagram:
             if argCount != 4 {
                 if argCount > 4 {
-                    print("Too many arguments for option :\(option.rawValue)")
+                    consoleIO.write("Too many arguments for option :\(option.rawValue)", to: .error)
                 } else {
-                    print("Too few arguments for option :\(option.rawValue)")
+                    consoleIO.write("Too few arguments for option :\(option.rawValue)", to: .error)
                 }
                 
                 ConsoleIO.printUsage()
@@ -32,28 +32,28 @@ class Panagram {
                 let second = CommandLine.arguments[3]
                 
                 if first.isAnagram(of: second) {
-                    print("\(second) is an anagram of \(first)")
+                    consoleIO.write("\(second) is an anagram of \(first)")
                 } else {
-                    print("\(second) is not an anagram of \(first)")
+                    consoleIO.write("\(second) is not an anagram of \(first)")
                 }
             }
         case .palindrome:
             if argCount != 3 {
                 if argCount > 3 {
-                    print("Too many arguments for option: -\(option.rawValue)")
+                    consoleIO.write("Too many arguments for option: -\(option.rawValue)", to: .error)
                 } else {
-                    print("Too few arguments for option: -\(option.rawValue)")
+                    consoleIO.write("Too few arguments for option: -\(option.rawValue)", to: .error)
                 }
             } else {
                 let string = CommandLine.arguments[2]
                 let isPalindrome = string.isPalindrome()
                 let variable = isPalindrome ? "" : "not "
-                print("\(string) is \(variable) a palindrome")
+                consoleIO.write("\(string) is \(variable) a palindrome")
             }
         case .help:
             ConsoleIO.printUsage()
         case .unknown:
-            print("Unknown option: -\(value)")
+            consoleIO.write("Unknown option: -\(value)", to: .error)
             ConsoleIO.printUsage()
         }
     }
