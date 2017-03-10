@@ -10,6 +10,7 @@
 		337467701E725EA100D292FD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374676F1E725EA100D292FD /* main.swift */; };
 		337467771E725F2100D292FD /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337467761E725F2100D292FD /* ConsoleIO.swift */; };
 		337467791E72612C00D292FD /* Panagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337467781E72612C00D292FD /* Panagram.swift */; };
+		3374677B1E72674300D292FD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374677A1E72674300D292FD /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		3374676F1E725EA100D292FD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		337467761E725F2100D292FD /* ConsoleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 		337467781E72612C00D292FD /* Panagram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Panagram.swift; sourceTree = "<group>"; };
+		3374677A1E72674300D292FD /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				3374676F1E725EA100D292FD /* main.swift */,
 				337467761E725F2100D292FD /* ConsoleIO.swift */,
 				337467781E72612C00D292FD /* Panagram.swift */,
+				3374677A1E72674300D292FD /* StringExtension.swift */,
 			);
 			path = Panagram;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3374677B1E72674300D292FD /* StringExtension.swift in Sources */,
 				337467701E725EA100D292FD /* main.swift in Sources */,
 				337467771E725F2100D292FD /* ConsoleIO.swift in Sources */,
 				337467791E72612C00D292FD /* Panagram.swift in Sources */,

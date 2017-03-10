@@ -16,20 +16,20 @@ enum OptionType: String {
     
     init(value: String) {
         switch value {
-            case OptionType.palindrome.rawValue: self = .palindrome
-            case OptionType.anagram.rawValue: self = .anagram
-            case OptionType.help.rawValue: self = .help
-            default: self = .unknown
+        case OptionType.palindrome.rawValue: self = .palindrome
+        case OptionType.anagram.rawValue: self = .anagram
+        case OptionType.help.rawValue: self = .help
+        default: self = .unknown
         }
     }
     
 }
 
 class ConsoleIO {
-
+    
     class func printUsage() {
         let executableName = (CommandLine.arguments[0] as NSString).lastPathComponent
-    
+        
         print("usage:")
         print("\(executableName) -a string1 string2")
         print("or")
