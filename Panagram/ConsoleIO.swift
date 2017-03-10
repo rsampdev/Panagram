@@ -8,6 +8,23 @@
 
 import Foundation
 
+enum OptionType: String {
+    case palindrome = "p"
+    case anagram = "a"
+    case help = "h"
+    case unknown
+    
+    init(value: String) {
+        switch value {
+            case OptionType.palindrome.rawValue: self = .palindrome
+            case OptionType.anagram.rawValue: self = .anagram
+            case OptionType.help.rawValue: self = .help
+            default: self = .unknown
+        }
+    }
+    
+}
+
 class ConsoleIO {
 
     class func printUsage() {
@@ -20,6 +37,10 @@ class ConsoleIO {
         print("or")
         print("\(executableName) -h to show usage information")
         print("Type \(executableName) without an option to enter interactive mode.")
+    }
+    
+    func getOption(_ option: String) -> (option: OptionType, value: String) {
+        return (OptionType(value: option), option)
     }
     
 }

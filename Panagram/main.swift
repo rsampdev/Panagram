@@ -10,4 +10,8 @@ import Foundation
 
 let panagram = Panagram()
 
-panagram.staticMode()
+if CommandLine.argc < 2 {
+    
+} else {
+    panagram.staticMode()
+}

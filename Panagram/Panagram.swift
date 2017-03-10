@@ -9,9 +9,14 @@
 import Foundation
 
 class Panagram {
+    
+    let consoleIO = ConsoleIO()
 
     func staticMode() {
-        ConsoleIO.printUsage()
+        let argCount = CommandLine.argc
+        let argument = CommandLine.arguments[1]
+        let (option, value) = self.consoleIO.getOption(argument.substring(from: argument.characters.index(argument.startIndex, offsetBy: 1)))
+        print("Argument count: \(argCount) Option: \(option) value: \(value)")
     }
     
 }
