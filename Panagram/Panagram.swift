@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  Panagram.swift
 //  Panagram
 //
 //  Created by Rodney Sampson on 3/9/17.
@@ -8,6 +8,10 @@
 
 import Foundation
 
-let panagram = Panagram()
+class Panagram {
 
-panagram.staticMode()
+    func staticMode() {
+        ConsoleIO.printUsage()
+    }
+    
+}
