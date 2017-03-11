@@ -17,6 +17,7 @@ enum OptionType: String {
     case palindrome = "p"
     case anagram = "a"
     case help = "h"
+    case quit = "q"
     case unknown
     
     init(value: String) {
@@ -24,6 +25,7 @@ enum OptionType: String {
         case OptionType.palindrome.rawValue: self = .palindrome
         case OptionType.anagram.rawValue: self = .anagram
         case OptionType.help.rawValue: self = .help
+        case OptionType.quit.rawValue: self = .quit
         default: self = .unknown
         }
     }
@@ -53,6 +55,13 @@ class ConsoleIO {
         case .standard: print("\u{001B}[;m\(message)")
         case .error: fputs("\u{001B}[0;31m\(message)\n", stderr)
         }
+    }
+    
+    func getInput() -> String {
+        let keyboard = FileHandle.standardInput
+        let inputData = keyboard.availableData
+        let strData = String(data: inputData, encoding: String.Encoding.utf8)!
+        return strData.trimmingCharacters(in: CharacterSet.newlines)
     }
     
 }
